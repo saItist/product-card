@@ -1,0 +1,150 @@
+/* === Общие настройки === */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F9F9FB; /* фон страницы */
+    margin: 0;
+    padding: 0;
+    color: #333333;
+}
+
+.titlev {
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 78px;
+    text-align: center;
+    margin: 60px 0 40px 0;
+    color: #515076;
+}
+
+.brief {
+    color: #A5A3B9;
+    font-size: 14px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* === Сетка карточек === */
+.products-list {
+    list-style: none;
+    padding: 0 20px;
+    margin: 0 auto 60px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 40px;
+    max-width: 1280px;
+}
+
+/* === Карточка продукта === */
+.products-list li {
+    background-color: #F4F4F4; /* слегка серый фон */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    text-align: center;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.products-list li:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* === Изображение === */
+.products-list li img {
+    width: 100%;
+    max-width: 290px;
+    height: 245px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+/* === Название === */
+.products-list h2 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: #515076;
+    margin: 10px 0 15px 0;
+}
+
+/* === Описание === */
+.products-list p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #6B6B85;
+    margin-bottom: 15px;
+    padding: 0 10px;
+}
+
+/* === Состав товара — вертикальный список, текст без фона === */
+.products-description {
+    list-style: none; /* убираем точки */
+    padding: 0;
+    text-align: left;
+    font-size: 14px;
+    line-height: 20px;
+    color: #515076;
+    margin-bottom: 20px;
+}
+
+.products-description li {
+    display: block; /* вертикально */
+    margin-bottom: 5px; /* расстояние между элементами */
+    background: none; /* только текст, без фона */
+    padding: 0;
+    font-weight: 400;
+}
+
+/* === Цена — слово "Цена:" слева, сумма справа === */
+.price-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* цена справа, слово "Цена:" слева */
+    align-items: center;
+    margin-top: 10px;
+}
+
+.price-name {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #515076;
+}
+
+.price-money {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #515076; /* обычный цвет */
+}
+
+/* === Адаптивность === */
+@media (max-width: 1024px) {
+    .products-list {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 30px;
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .titlev {
+        font-size: 56px;
+        line-height: 64px;
+        margin: 40px 0 30px 0;
+    }
+    .products-list {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 10px;
+    }
+    .products-list li {
+        padding: 20px 15px;
+    }
+}
