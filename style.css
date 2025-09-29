@@ -1,7 +1,7 @@
 /* === Общие настройки === */
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #F9F9FB; /* фон страницы */
+    background-color: white; /* фон страницы */
     margin: 0;
     padding: 0;
     color: #333333;
@@ -148,3 +148,19 @@ body {
         padding: 20px 15px;
     }
 }
+.fon-image {
+    position: absolute;      /* фиксируем на странице */
+    width: 790px;            /* ширина из макета */
+    height: 700px;           /* высота из макета */
+    top: -70px;                /* смещение сверху */
+    left: 85px;              /* смещение слева */
+    transform: rotate(0deg); /* угол поворота */
+    opacity: 1;              /* прозрачность */
+    z-index: -1;             /* картинка позади текста и карточек */
+}
+
+
+
+
+
+    
