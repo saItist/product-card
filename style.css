@@ -84,7 +84,7 @@
 
 }
 
-.product-composition {
+.product-compound {
     margin-top: 5px;
 
 
@@ -127,4 +127,15 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
+}
+.cards-list-container {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.product-compound {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
