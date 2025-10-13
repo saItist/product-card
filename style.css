@@ -13,10 +13,6 @@
    
 }
 
-
-
-
-
 .cards-list-container {
     display:flex;
     flex-wrap: wrap;
@@ -42,7 +38,7 @@
 }
 
 .background-image {
-    background-image: url(images/fon-pic.jpg);
+    background-image: url("images/background-flowers.jpg");
     width: 790px;
     height: 697px;
     z-index: -1;
@@ -66,13 +62,6 @@
     justify-content: center;
 }
     
-
-
-
-
-
-
-
 .product-category {
     font-size: 12px;
     line-height: 24px;
@@ -102,9 +91,9 @@
 }
 
 .product-compound-item {
-  list-style: none; /* убираем стандартный маркер */
+  list-style: none; 
   position: relative;
-  padding-left: 15px; /* отступ для маркера */
+  padding-left: 15px;
   display: flex;
     align-items: center;
 }
@@ -115,9 +104,9 @@
   left: 0;
   width: 7px;
   height: 7px;
-  border: 1.0px solid #333; /* рамка кружка */
-  border-radius: 100%;       /* делаем круглым */
-  background: transparent;  /* внутри пусто */
+  border: 1.0px solid #333; 
+  border-radius: 100%;       
+  background: transparent;
   align-items: center;
 }
 
