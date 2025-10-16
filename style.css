@@ -9,6 +9,7 @@
     font-family: 'Montserrat', sans-serif;
     align-items: center;  
 }
+
 .cards-list-container {
     display:flex;
     flex-wrap: wrap;
@@ -17,6 +18,7 @@
     justify-content: center;
     margin-bottom: 116px;   
 }
+
 .main-title {
     font-weight: 400;
     font-size: 70px;
@@ -26,6 +28,7 @@
     margin-top: 220px;
     margin-bottom: 110px;
 }
+
 .background-image {
     background-image: url("images/background-flowers.jpg");
     width: 790px;
@@ -35,6 +38,7 @@
     top: 0px;
     left: 160px;    
 }
+
 .card-container {
     width: 340px;
     height: 573px;
@@ -44,6 +48,7 @@
     margin-top: 50px;
     justify-content: center;
 }  
+
 .product-category {
     font-size: 12px;
     line-height: 24px;
@@ -53,18 +58,22 @@
     margin-bottom: 5px;
     display: block;
 }
+
 .product-name {
     font-weight: 700;
     font-size: 20px;
     line-height: 27px;
     margin-bottom: 5px;
 }
+
 .product-description {
     margin-bottom: 15px;
 }
+
 .product-compound {
     margin-top: 5px;
 }
+
 .product-compound-item {
   list-style: none; 
   position: relative;
@@ -72,6 +81,7 @@
   display: flex;
     align-items: center;
 }
+
 .product-compound-item::before {
   content: "";
   position: absolute;
@@ -83,27 +93,32 @@
   background: transparent;
   align-items: center;
 }
+
 .product-price-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 25px; 
 }
+
 .product-price-label {
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;   
 }
+
 .product-price-number {
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
 }
+
 .cards-list-container {
     list-style: none;
     padding: 0;
     margin: 0;
 }
+
 .product-compound {
     list-style: none;
     padding: 0;
