@@ -125,10 +125,10 @@
     margin: 0;
 }
 
-#toggle-button-color.silver {
+.bg-silver-button {
     background-color: #C0C0C0;
 }
 
-#toggle-button-color.gold {
+.bg-gold-button {
     background-color: #FFD700;
 }

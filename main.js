@@ -24,9 +24,9 @@ const openGoogleButton = document.querySelector('#open-google');
 openGoogleButton.addEventListener('click', openGoogle)
 
 function openGoogle() {
-    const answer = confirm ('Вы действительно хотите открыть Google?') ;
-    if (answer=== true) {
-        window.open ('https://www.google.com')
+    const answer = confirm('Вы действительно хотите открыть Google?') ;
+    if(answer=== true){
+        window.open('https://www.google.com')
     } else {
         return;
     }
@@ -35,11 +35,11 @@ function openGoogle() {
 // Вывод сообщения в консоль лог и алерт
 const outputLogButton = document.querySelector('#output-console-log-button')
 
-outputLogButton.addEventListener ('click', () => outputConsoleLog('ДЗ №4'))
+outputLogButton.addEventListener('click', () => outputConsoleLog('ДЗ №4'))
 
-function outputConsoleLog (message) {
-    alert (message)
-    console.log (message)
+function outputConsoleLog(message) {
+    alert(message)
+    console.log(message)
 }
 
 // Вывод текста заголовка в консоль при наведении мыши
@@ -53,9 +53,8 @@ mainTitle.addEventListener ('mouseover', () => {
 // Кнопка меняет цывет при каждом клике
 const toggleButton = document.querySelector('#toggle-button-color');
 
-toggleButton.classList.add('silver');
+toggleButton.classList.add('bg-silver-button');
 
 toggleButton.addEventListener('click', () => {
-    toggleButton.classList.toggle('gold');
-    toggleButton.classList.toggle('silver');
+    toggleButton.classList.toggle('bg-gold-button');
 });
