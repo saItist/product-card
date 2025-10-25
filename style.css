@@ -124,3 +124,11 @@
     padding: 0;
     margin: 0;
 }
+
+.bg-silver {
+    background-color: #C0C0C0;
+}
+
+.bg-gold {
+    background-color: #FFD700;
+}
