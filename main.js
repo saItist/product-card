@@ -25,7 +25,7 @@ openGoogleButton.addEventListener('click', openGoogle)
 
 function openGoogle() {
     const answer = confirm('Вы действительно хотите открыть Google?') ;
-    if(answer=== true){
+    if(answer=== true) {
         window.open('https://www.google.com')
     } else {
         return;
@@ -53,8 +53,8 @@ mainTitle.addEventListener ('mouseover', () => {
 // Кнопка меняет цывет при каждом клике
 const toggleButton = document.querySelector('#toggle-button-color');
 
-toggleButton.classList.add('bg-silver-button');
+toggleButton.classList.add('bg-silver');
 
 toggleButton.addEventListener('click', () => {
-    toggleButton.classList.toggle('bg-gold-button');
+    toggleButton.classList.toggle('bg-gold');
 });
