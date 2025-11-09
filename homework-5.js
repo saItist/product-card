@@ -6,22 +6,27 @@ showCityWeather("Махачкала", 16);
 
 showCityWeather("Киев", 6);
 
-const speedOfSound = 343
+
+const SPEED_OF_SOUND = 343;
 
 function checkSpeed(speed) {
-    if (speed > speedOfSound) {
-        console.log("Сверхзвуковая скорость");
-    } else if (speed < speedOfSound) {
-        console.log("Дозвуковая скорость");
-    } else {
-        console.log("Скорость звука");
-    }
+  if (speed > SPEED_OF_SOUND) {
+    console.log("Сверхзвуковая скорость");
+  } else if (speed < SPEED_OF_SOUND) {
+    console.log("Дозвуковая скорость");
+  } else {
+    console.log("Скорость звука");
+  }
 }
+checkSpeed(200);
+checkSpeed(343); 
+checkSpeed(800);
+
 
 const product = "Ноутбук";
 const price = 1200;
 
-function checkPurchase(budget) {
+function buyProduct(budget) {
     if (budget >= price) {
         console.log(`${product} приобретён. Спасибо за покупку!`);
     } else {
