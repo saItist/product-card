@@ -25,11 +25,12 @@ car.owner = personData;
 
 //задание 6.5
 function addMaxSpeed(carObject) {
-  // Проверяет, есть ли свойство "максимальная скорость"
-  if (!carObject.hasOwnProperty("максимальная скорость")) {
-    carObject["максимальная скорость"] = "280 км/ч"; // задает значение
+  // Проверяем, есть ли свойство maxSpeed
+  if (!carObject.hasOwnProperty("maxSpeed")) {
+    carObject.maxSpeed = "280 км/ч";
   }
 }
+addMaxSpeed(car);
 
 // Задание 6.6
 // Пример объекта
@@ -49,38 +50,89 @@ showProperty(book, "author");
 showProperty(book, "year"); 
 
 //задание 6.7
-const products = ["Молоко", "Хлеб", "Яблоки", "Сыр", "Яйца", "Масло"];
+const products = [
+  "Молоко",
+  "Хлеб",
+  "Яблоки",
+  "Сыр",
+  "Яйца",
+  "Масло"
+];
 
 // Задание 6.8
 const books = [
-  { title: "1984", author: "Джордж Оруэлл", year: 1949, coverColor: "синий", genre: "Дистопия" },
-  { title: "Подлец", author: "Борис Акунин", year: 2001, coverColor: "красный", genre: "Детектив" },
-  { title: "Азазель", author: "Борис Акунин", year: 1998, coverColor: "зелёный", genre: "Детектив" }
+  {
+    title: "1984",
+    author: "Джордж Оруэлл",
+    year: 1949,
+    coverColor: "синий",
+    genre: "Дистопия"
+  },
+  {
+    title: "Подлец",
+    author: "Борис Акунин",
+    year: 2001,
+    coverColor: "красный",
+    genre: "Детектив"
+  },
+  {
+    title: "Азазель",
+    author: "Борис Акунин",
+    year: 1998,
+    coverColor: "зелёный",
+    genre: "Детектив"
+  }
 ];
 
 // Добавил методом массива в конец списка
-books.push({ title: "Скотный двор", author: "Джордж Оруэлл", year: 1945, coverColor: "серый", genre: "Сатира" });
+books.push({
+  title: "Скотный двор",
+  author: "Джордж Оруэлл",
+  year: 1945,
+  coverColor: "серый",
+  genre: "Сатира"
+});
+
 // Задание 6.9
 // Мультивселенная — сборник Бориса Акунина
 const akuninCollection = [
-  { title: "Смерть Ахиллеса", author: "Борис Акунин", year: 2001, coverColor: "бордовый", genre: "Детектив" },
-  { title: "Коронация, или Последний из романов", author: "Борис Акунин", year: 2000, coverColor: "синий", genre: "Детектив" },
-  { title: "Турецкий гамбит", author: "Борис Акунин", year: 1998, coverColor: "красный", genre: "Детектив" }
+  {
+    title: "Смерть Ахиллеса",
+    author: "Борис Акунин",
+    year: 2001,
+    coverColor: "бордовый",
+    genre: "Детектив"
+  },
+  {
+    title: "Коронация, или Последний из романов",
+    author: "Борис Акунин",
+    year: 2000,
+    coverColor: "синий",
+    genre: "Детектив"
+  },
+  {
+    title: "Турецкий гамбит",
+    author: "Борис Акунин",
+    year: 1998,
+    coverColor: "красный",
+    genre: "Детектив"
+  }
 ];
 
 // Объединил массивы
 const allBooks = [...books, ...akuninCollection];
-// Задание 6.10
+
 // Задание 6.10
 // Функция, которая добавляет свойство "isRare" (редкая книга)
 function markRareBooks(booksArray) {
   return booksArray.map(book => {
-    return { 
-      ...book, 
-      isRare: book.year > 2000 
+    return {
+      ...book,
+      isRare: book.year > 2000
     };
   });
 }
+
 
 // Вызываем функцию и сохраняем новый массив
 const updatedBooks = markRareBooks(allBooks);
