@@ -125,12 +125,10 @@ const allBooks = [...books, ...akuninCollection];
 // Задание 6.10
 // Функция, которая добавляет свойство "isRare" (редкая книга)
 function markRareBooks(booksArray) {
-  return booksArray.map(book => {
-    return {
-      ...book,
-      isRare: book.year > 2000
-    };
-  });
+  return booksArray.map(book => ({
+    ...book,
+    isRare: book.year > 2000
+  }));
 }
 
 
@@ -138,6 +136,9 @@ function markRareBooks(booksArray) {
 const updatedBooks = markRareBooks(allBooks);
 
 // Проверяем результат
-updatedBooks.forEach(book => {
-  console.log(`${book.title} (${book.year}) — редкая: ${book.isRare}`);
-});
+updatedBooks.forEach(
+  book =>
+    console.log(
+      `${book.title} (${book.year}) — редкая: ${book.isRare}`
+    )
+);
