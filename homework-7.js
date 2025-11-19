@@ -1,3 +1,5 @@
+import { commentsList } from './comments.js';
+
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const filteredNumbers = numbers.filter(num => num >= 5);
@@ -15,18 +17,13 @@ const movies = [
 const hasMatrix = movies.includes("Матрица");
 console.log(hasMatrix); // true
 
-function reverseArray(arr) {
-  return arr.slice().reverse();
-}
+const reverseArray = arr => arr.reverse();
 
 const reversedNumbers = reverseArray(filteredNumbers);
 console.log("Перевёрнутые числа:", reversedNumbers);
 
 const reversedItems = reverseArray(movies);
 console.log("Перевёрнутые строки:", reversedItems);
-
-
-import { commentsList } from './comments.js';
 
 
 const comEmails = commentsList.filter(comment => comment.email.includes('.com'));
