@@ -7,17 +7,19 @@ if (!isNaN(count) && count >= 1 && count <= 5) {
   productCards.slice(0, count).forEach(product => {
     const cardsClone = cardsTemplate.content.cloneNode(true);
     cardsClone.querySelector('.card-image').src = product.image;
+    cardsClone.querySelector('.product-category').textContent = product.category
     cardsClone.querySelector('.product-name').textContent = product.name;
     cardsClone.querySelector('.product-description').textContent = product.description;
 
     const compoundList = cardsClone.querySelector('.product-compound');
-    const compounds = product.compound.split(';'); // разбиваем строку на части
-    compounds.forEach(item => {
-      const li = document.createElement('li');
-      li.classList.add('product-compound-item');
-      li.textContent = item.trim();
-      compoundList.appendChild(li);
-    });
+
+  
+  product.compound.forEach(item => {
+    const li = document.createElement('li');
+    li.classList.add('product-compound-item');
+    li.textContent = item; 
+    compoundList.appendChild(li);
+  });
 
     cardsClone.querySelector('.product-price-number').textContent = product.price + " ₽";
 
