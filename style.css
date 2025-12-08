@@ -2,12 +2,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+.main-container{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-size: 13px;
     line-height: 18px;
     color: #515076;
     font-weight: 400;
     font-family: 'Montserrat', sans-serif;
-    align-items: center;  
+    align-items: center; 
 }
 
 .cards-list-container {
@@ -35,7 +40,7 @@
     height: 697px;
     z-index: -1;
     position: absolute;
-    top: 0px;
+    top: 800px;
     left: 160px;    
 }
 
@@ -131,4 +136,364 @@
 
 .bg-gold {
     background-color: #FFD700;
+}
+
+.main-footer {
+    color: #FFFFFF;
+    background-color: #3A3A3A;
+    font-family:'Montserrat',sans-serif;
+    padding-top: 60px;
+    margin-top: 60px;
+}
+
+.main-nav {
+    width: 100%;
+    border-radius: 10px;
+    margin: 85px auto 245px  auto;
+    display: flex;
+    justify-content: space-between;
+    align-items:center ;
+    display: flex;  
+}
+
+.footer-icon-container {
+  display: flex;
+  gap: 30px;
+  align-items: center;         
+  padding-top:42px;          
+  top: 214px;
+}
+
+.footer-icon {
+  width: 21px;
+  height: 18px;
+  opacity: 1;
+}
+
+.footer-copy{      
+    font-weight: 300;
+    font-style: normal;
+    font-size: 18px;
+    letter-spacing: 0;    
+    text-align: center;
+    margin-top: 33px;
+}
+
+.footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 150px;
+    padding-bottom: 40px;
+}
+.footer-line {
+    width: 66px;
+    height: 0;
+    border-top: 1px solid #FFFFFF;
+}
+
+.product-cards-title {
+    opacity: 1;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 154%;
+    text-transform: capitalize;
+}
+
+.footer-description{
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 154%;
+    letter-spacing: 0;
+    text-transform: capitalize;
+}
+
+.subscribe-container {
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    width: 450px;
+    height: 61px;
+    border-radius: 10px;
+    padding: 0 20px;
+}
+    
+
+.vertical-line {
+    width: 1px;
+    height: 18px;
+    background-color: #000000;
+}
+
+.subscribe-container button {
+    width: 144px;
+    height: 22px;
+    border-radius: 5px;
+    border: none;
+    background: #FFFFFF;
+    cursor: pointer;
+    color: #000000;
+    font-size: 18px;
+}
+
+.subscribe-container input::placeholder {
+    color: #000000;
+    opacity:0.75;
+    
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+}
+
+.subscribe-container input {
+    flex-grow: 1;
+    background-color: #FFFFFF;
+    border: none;
+}
+
+.footer-menu {
+    width: 178px;
+    height: 147px;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    margin-right:50px;  
+    margin-top: -40px;
+}
+
+.footer-menu h3 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0;
+    margin-bottom: 23px;
+    color: #FFFFFF;
+}
+
+.footer-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+
+.footer-menu-item{
+    font-size: 18px;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+#subscribe-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:-50px;
+    margin-left: -150px;
+}
+
+.subscribe-label {
+    font-weight: 300;
+    font-size: 24px;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+.about-us{
+    margin-left: 50px;
+}
+
+#register-form {
+    width: 400px;
+    margin: 40px auto 80px auto;
+    padding: 25px 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.1);
+    font-family: 'Montserrat', sans-serif;
+}
+
+#register-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    font-size: 15px;
+    font-weight: 500;
+    color: #3A3A3A;
+}
+
+#register-form input {
+    height: 42px;
+    padding: 10px 14px;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+
+    background: #F8F8F8;
+    transition: 0.25s;
+}
+
+#register-form input:hover {
+    border-color: #888;
+}
+
+#register-form input:focus {
+    border-color: #000;
+    background: #fff;
+    outline: none;
+}
+
+#register-form button {
+    margin-top: 5px;
+
+    height: 46px;
+
+    background: #3A3A3A;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+#register-form button:hover {
+    background: #000;
+}
+
+#error-message {
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Кнопка Аутентификация */
+.auth-button {
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3A3A3A;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 2000;
+    transition: 0.25s;
+}
+
+.auth-button:hover {
+    background-color: #000;
+}
+
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 1500;
+}
+
+/* Показываем модалку */
+.modal.modal-showed {
+    display: flex;
+}
+
+/* Затемнение фона */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+/* Содержимое модалки */
+.modal-content {
+    position: relative;
+    background: #fff;
+    padding: 30px 25px;
+    border-radius: 12px;
+    width: 360px;
+    max-width: 90%;
+    z-index: 2;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Крестик */
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    border: none;
+    background: transparent;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Стили формы модалки */
+#auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+#auth-form input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    background: #F8F8F8;
+    transition: 0.25s;
+}
+
+#auth-form input:focus {
+    border-color: #000;
+    background: #fff;
+    outline: none;
+}
+
+#auth-form button {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background-color: #3A3A3A;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+#auth-form button:hover {
+    background-color: #000;
 }

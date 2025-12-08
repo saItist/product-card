@@ -10,44 +10,135 @@
 </head>
 
 <body>
-    <button id="change-all-cards-color-button">Сменить цвет всех карточек</button>
-    <button id="change-first-card-color-button">Сменить цвет первой карточки</button>
-    <button id="open-google">Открыть Google.com</button>
-    <button id="output-console-log-button">Вывести сообщение и алерт в консоль лог</button>
-    <button id="toggle-button-color">Переключить цвет кнопки</button>
-
-   
-    <h1 class="main-title">Выбери свой продукт</h1>
     <div class="background-image"></div>
+    <form id="register-form" novalidate>
+        <label>
+            Имя:
+            <input type="text" id="first-name" placeholder="Введите имя..." required>
+        </label>
+
+        <label>
+            Фамилия:
+            <input type="text" id="last-name" placeholder="Введите фамилию..." required>
+        </label>
+
+        <label>
+            Дата рождения:
+            <input type="date" id="birth-date" required>
+        </label>
+
+        <label>
+            Логин:
+            <input type="text" id="login" placeholder="Придумайте логин..." required>
+        </label>
+
+        <label>
+            Пароль:
+            <input type="password" id="password" placeholder="Введите пароль..." required>
+        </label>
+
+        <label>
+            Повторите пароль:
+            <input type="password" id="password-repeat" placeholder="Повторите пароль..." required>
+        </label>
+
+        <button type="submit">Зарегистрироваться</button>
+
+        <p id="error-message" style="color: red; display: none;"></p>
+    </form>
+    <div class="main-container">    
+
+        <h1 class="main-title">Выбери свой продукт</h1>
 
 
-    <ul id="cards-list" class="cards-list-container"></ul>
+        <ul id="cards-list" class="cards-list-container"></ul>
 
-   
-    <template id="card-template">
-        <li class="card-container">
-            <img class="card-image" src="" width="290" height="245">
-            <span class="product-category"></span>
-            <h2 class="product-name"></h2>
-            <p class="product-description"></p>
-            <span>Состав:</span>
-            <ul class="product-compound"></ul>
+    
+        <template id="card-template">
+            <li class="card-container">
+                <img class="card-image" src="" width="290" height="245">
+                <span class="product-category"></span>
+                <h2 class="product-name"></h2>
+                <p class="product-description"></p>
+                <span>Состав:</span>
+                <ul class="product-compound"></ul>
 
-            <div class="product-price-container">
-                <b class="product-price-label">Цена:</b>
-                <span class="product-price-number">₽</span>
+                <div class="product-price-container">
+                    <b class="product-price-label">Цена:</b>
+                    <span class="product-price-number">₽</span>
+                </div>
+            </li>
+        </template>
+    </div>
+ <footer class="main-footer">
+        <nav class="main-nav">
+            <div class="about-us">
+
+                <h1 class="product-cards-title">Product Cards</h1>
+                <h4 class="footer-description">У нас самые лучшие продукты для кожи!</h4>
+                 <div class="footer-icon-container">    
+                    <img class="footer-icon" src="images/telega-icon.png">
+                    <img class="footer-icon" src="images/vk-icon.png">
+                </div>
+            </div>            
+               
+            <form id="subscribe-form" action="" method="get" novalidate>
+                <label for="email" class="subscribe-label">Подпишись на наши акции:</label>
+                <div class="subscribe-container">
+                    <input id="subscribe-email" type="email" placeholder="Введи Email..."   name="email" required>
+                    <div class="vertical-line"></div>
+                    <button class="subscribe-button"type="submit">Подписаться</button>
+                </div>
+            </form>
+            <div class="footer-menu">
+                <h3>Быстрые ссылки</h3>
+                <ul>
+                    <li class="footer-menu-item">Главная</li>
+                    <li class="footer-menu-item">Магазин</li>
+                    <li class="footer-menu-item">Контакты</li>       
+                </ul>
             </div>
-        </li>
-    </template>
+        </nav>
+       <div class="footer-bottom">
+            <div class="footer-line"></div>
+            <p class="footer-copy">www.product-cards.com © all rights reserved</p>
+        </div>
+        
 
+    </footer>
     
 
 
-    <script src="main.js"></script>
     <script src="homework-5.js"></script>
     <script src="homework-6.js"></script>
     <script src="homework-7.js" type="module"></script>
     <script src="homework-8.js" type="module"></script>
+    <script src="homework-9.js" type="module"></script>
+
+
+    <!-- Кнопка Аутентификация -->
+<button id="auth-button" class="auth-button">Аутентификация</button>
+
+<!-- Модальное окно -->
+<div class="modal">
+    <div class="overlay"></div>
+    <div class="modal-content">
+        <button class="close-modal">&times;</button>
+        <h2 class="modal-title">Вход в аккаунт</h2>
+        <form id="auth-form">
+            <label>
+                Логин:
+                <input type="text" id="auth-login" placeholder="Введите логин" required>
+            </label>
+            <label>
+                Пароль:
+                <input type="password" id="auth-password" placeholder="Введите пароль" required>
+            </label>
+            <button type="submit">Войти</button>
+            <p id="auth-error" style="color: red; display: none;"></p>
+        </form>
+    </div>
+</div>
 
 </body>
 </html>

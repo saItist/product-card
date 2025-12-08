@@ -21,7 +21,6 @@ export const productCards = [
       "минералы",
       "масла"],
     price: "1 850",
-
   },
 
   {
@@ -49,13 +48,13 @@ export const productCards = [
   {
     image:"images/gift-set-no-5.jpg",
     category: "для нормальной кожи",
-    name:"Товар Подарочный набор №5",    
+    name:"Подарочный набор №5",    
     description:"Весь набор средств Invisible symphony, крем, маска, мусс и гель для умывания",
     compound:[
       "воски",
       "минералы",
       "масла"],
-    price:"7 520",    
+    price: "7 520",    
   }
 ]
 
