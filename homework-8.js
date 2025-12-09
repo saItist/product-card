@@ -6,7 +6,9 @@ const count = parseInt(prompt("Сколько карточек отобрази�
 if (!isNaN(count) && count >= 1 && count <= 5) {
   productCards.slice(0, count).forEach(product => {
     const cardsClone = cardsTemplate.content.cloneNode(true);
-    cardsClone.querySelector('.card-image').src = product.image;
+    const IMG_PATH = "images/";
+
+    cardsClone.querySelector('.card-image').src = IMG_PATH + product.image;
     cardsClone.querySelector('.product-category').textContent = product.category
     cardsClone.querySelector('.product-name').textContent = product.name;
     cardsClone.querySelector('.product-description').textContent = product.description;
@@ -21,8 +23,8 @@ if (!isNaN(count) && count >= 1 && count <= 5) {
     compoundList.appendChild(li);
   });
 
-    cardsClone.querySelector('.product-price-number').textContent = product.price + " ₽";
-
+    cardsClone.querySelector('.product-price-number').textContent =
+    product.price.toLocaleString("ru-RU") + " ₽";
     cardsList.appendChild(cardsClone);
   });
 } else {

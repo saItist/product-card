@@ -1,60 +1,64 @@
 export const productCards = [
   {
-    image:"images/mousse.jpg",
+    image: "mousse.jpg",
     category: "для нормальной кожи",
     name: "Увлажняющий мусс",   
-    description:"Глубоко увлажняют кожу лица, оставляя её мягкой и гладкой",
-    compound:[
+    description: "Глубоко увлажняют кожу лица, оставляя её мягкой и гладкой",
+    compound: [
       "активные натуральные комплексы",
       "витамины С, А, РР, В И Е",
-      "солнцезащитные компоненты"],
-    price: "2 750",
+      "солнцезащитные компоненты"
+    ],
+    price: 2750,
   
   },
   {
-    image:"images/mask.jpeg",
+    image: "mask.jpeg",
     category: "для нормальной кожи",
     name: "Увлажняющая маска",    
     description:"Способствует удерживанию влаги в верхних слоях кожи",
-    compound:[
+    compound: [
       "Увлажняющая маска",
       "минералы",
-      "масла"],
-    price: "1 850",
+      "масла"
+    ],
+    price: 1850,
   },
 
   {
-    image:"images/cleansing-gel.jpeg",
+    image: "cleansing-gel.jpeg",
     category: "для нормальной кожи",
     name: "Гель для умывания",   
-    description:"Интенсивно очищает, не повреждает защитный барьер кожи",
-    compound:[
+    description: "Интенсивно очищает, не повреждает защитный барьер кожи",
+    compound: [
       "минералы",
       "витамины С,А,РР,В И Е",
-      "увлажняющие компоненты"],
-    price: "1 650",
+      "увлажняющие компоненты"
+    ],
+    price: 1650,
   },
   {
-    image:"images/gift-set-no-1.jpg",
+    image: "gift-set-no-1.jpg",
     category: "для нормальной кожи",
     name: "Подарочный набор №1",   
-    description:"Набор, состоящий из увлажняющего крема и маски",
-    compound:[
+    description: "Набор, состоящий из увлажняющего крема и маски",
+    compound: [
       "воски",
       "минералы",
-      "масла"],
-    price: "4 750",
+      "масла"
+    ],
+    price: 4750,
   },
   {
-    image:"images/gift-set-no-5.jpg",
+    image: "gift-set-no-5.jpg",
     category: "для нормальной кожи",
-    name:"Подарочный набор №5",    
-    description:"Весь набор средств Invisible symphony, крем, маска, мусс и гель для умывания",
-    compound:[
+    name: "Подарочный набор №5",    
+    description: "Весь набор средств Invisible symphony, крем, маска, мусс и гель для умывания",
+    compound: [
       "воски",
       "минералы",
-      "масла"],
-    price: "7 520",    
-  }
+      "масла"
+    ],
+    price: 7520,    
+  },
 ]
-

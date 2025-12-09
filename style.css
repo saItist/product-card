@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 .main-container{
     margin: 0;
     padding: 0;
@@ -167,7 +168,6 @@
 .footer-icon {
   width: 21px;
   height: 18px;
-  opacity: 1;
 }
 
 .footer-copy{      
