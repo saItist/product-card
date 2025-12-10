@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.main-container{
+.main-container {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -170,7 +170,7 @@
   height: 18px;
 }
 
-.footer-copy{      
+.footer-copy {      
     font-weight: 300;
     font-style: normal;
     font-size: 18px;
@@ -201,7 +201,7 @@
     text-transform: capitalize;
 }
 
-.footer-description{
+.footer-description {
     font-weight: 400;
     font-style: normal;
     font-size: 18px;
@@ -282,7 +282,7 @@
 }
 
 
-.footer-menu-item{
+.footer-menu-item {
     font-size: 18px;
     color: #FFFFFF;
     font-weight: 400;
@@ -304,7 +304,7 @@
     margin-bottom: 15px;
 }
 
-.about-us{
+.about-us {
     margin-left: 50px;
 }
 
