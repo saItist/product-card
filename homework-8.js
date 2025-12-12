@@ -7,7 +7,7 @@ if (!isNaN(count) && count >= 1 && count <= 5) {
   productCards.slice(0, count).forEach(product => {
     const cardsClone = cardsTemplate.content.cloneNode(true);
 
-    cardsClone.querySelector('.card-image').src = "images/" + product.image + ".jpg";
+    cardsClone.querySelector('.card-image').src = `images/${product.image}.jpg`;
     cardsClone.querySelector('.product-category').textContent = product.category
     cardsClone.querySelector('.product-name').textContent = product.name;
     cardsClone.querySelector('.product-description').textContent = product.description;
