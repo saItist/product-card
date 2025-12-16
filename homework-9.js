@@ -1,132 +1,113 @@
-// Подписка на email
-const form = document.getElementById('subscribe-form');
-const emailInput = document.getElementById('subscribe-email');
+import { Modal } from './modal.js';
+import { Form } from './form.js';
 
-emailInput.addEventListener("input", () => {
-    emailInput.style.border = "none";
-});
+/* ---------- ФОРМЫ ---------- */
 
-form.addEventListener('submit', (event) => {
-    event.preventDefault();
+const subscribeForm = new Form('subscribe-form');
+const registerForm = new Form('register-form');
+const authForm = new Form('auth-form');
 
-    const email = emailInput.value.trim();
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+/* ---------- ПОДПИСКА ---------- */
 
-    if (!email || !emailRegex.test(email)) {
-        console.log('Неверный email');
-        emailInput.style.border = "1px solid red";
-        return;
-    }
-    emailInput.style.border = "";
-    console.log({ email: email });
-});
-
-// Регистрация пользователя
-const registerForm = document.getElementById("register-form");
-const firstName = document.getElementById("first-name");
-const lastName = document.getElementById("last-name");
-const birthDate = document.getElementById("birth-date");
-const login = document.getElementById("login");
-const password = document.getElementById("password");
-const passwordRepeat = document.getElementById("password-repeat");
-const errorMessage = document.getElementById("error-message");
-
-let registeredUser = null; // хранит зарегистрированного пользователя
-
-registerForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    // Скрываем ошибки
-    errorMessage.style.display = "none";
-    errorMessage.textContent = "";
-
-    // Проверка всех полей
-    if (!firstName.value.trim() ||
-        !lastName.value.trim() ||
-        !birthDate.value ||
-        !login.value.trim() ||
-        !password.value ||
-        !passwordRepeat.value) 
-    {
-        errorMessage.textContent = "Заполните все поля!";
-        errorMessage.style.display = "block";
-        return;
-    }
-
-    // Проверка совпадения паролей
-    if (password.value !== passwordRepeat.value) {
-        errorMessage.textContent = "Пароли не совпадают!";
-        errorMessage.style.display = "block";
-        return;
-    }
-
-    // Создание пользователя
-    registeredUser = {
-        firstName: firstName.value.trim(),
-        lastName: lastName.value.trim(),
-        birthDate: birthDate.value,
-        login: login.value.trim(),
-        password: password.value,
-        createdOn: new Date(),
-    };
-
-    console.log("Регистрация успешна!");
-    console.log(registeredUser);
-
-    // Можно очистить форму после регистрации
-    registerForm.reset();
-    alert("Регистрация прошла успешно!");
-});
-
-// Модальное окно авторизации
-const authButton = document.getElementById("auth-button");
-const modal = document.querySelector(".modal");
-const overlay = modal.querySelector(".overlay");
-const closeModal = modal.querySelector(".close-modal");
-const authForm = document.getElementById("auth-form");
-const authError = document.getElementById("auth-error"); // заранее добавь <p id="auth-error" style="color:red; display:none"></p> в HTML под формой
-
-authButton.addEventListener("click", () => {
-    modal.classList.add("modal-showed"); // открыть модалку
-});
-
-closeModal.addEventListener("click", () => {
-    modal.classList.remove("modal-showed"); // закрыть крестиком
-});
-
-overlay.addEventListener("click", () => {
-    modal.classList.remove("modal-showed"); // закрыть по затемнённому фону
-});
-
-// Глобальная переменная для текущего пользователя
-let currentUser = null;
-
-// Авторизация
-authForm.addEventListener("submit", (e) => {
+document
+  .getElementById('subscribe-form')
+  .addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const loginInput = document.getElementById("auth-login").value.trim();
-    const passwordInput = document.getElementById("auth-password").value;
+    if (!subscribeForm.isValid()) {
+      console.log('Неверный email');
+      return;
+    }
+
+    const values = subscribeForm.getValues();
+    console.log(values);
+
+    subscribeForm.reset();
+  });
+
+/* ---------- РЕГИСТРАЦИЯ ---------- */
+
+const errorMessage = document.getElementById("error-message");
+let registeredUser = null;
+
+document
+  .getElementById('register-form')
+  .addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    errorMessage.style.display = "none";
+
+    if (!registerForm.isValid()) {
+      errorMessage.textContent = "Заполните все поля!";
+      errorMessage.style.display = "block";
+      return;
+    }
+
+    const values = registerForm.getValues();
+
+    if (values.password !== values['password-repeat']) {
+      errorMessage.textContent = "Пароли не совпадают!";
+      errorMessage.style.display = "block";
+      return;
+    }
+
+    registeredUser = {
+      ...values,
+      createdOn: new Date(),
+    };
+
+    registerForm.reset();
+    alert("Регистрация прошла успешно!");
+  });
+
+/* ---------- МОДАЛКА ---------- */
+
+const authModal = new Modal('modal');
+const authButton = document.getElementById("auth-button");
+
+authButton.addEventListener("click", () => {
+  authModal.open();
+});
+
+/* ---------- АВТОРИЗАЦИЯ ---------- */
+
+const authError = document.getElementById("auth-error");
+let currentUser = null;
+document.getElementById('auth-form').addEventListener('input', () => {
+  authError.style.display = 'none';
+});
+if (!authForm.isValid()) {
+  authError.textContent = "Заполните все поля";
+  authError.style.display = "block";
+  return;
+}
+
+
+document
+  .getElementById('auth-form')
+  .addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const values = authForm.getValues();
 
     if (!registeredUser) {
-        authError.textContent = "Сначала зарегистрируйтесь!";
-        authError.style.display = "block";
-        return;
+      authError.textContent = "Сначала зарегистрируйтесь!";
+      authError.style.display = "block";
+      return;
     }
 
-    if (loginInput === registeredUser.login && passwordInput === registeredUser.password) {
-        // Успешная авторизация
-        modal.classList.remove("modal-showed");
-        authForm.reset();
-        authError.style.display = "none";
+    if (
+      values['auth-login'] === registeredUser.login &&
+      values['auth-password'] === registeredUser.password
+    ) {
+      authModal.close();
+      authForm.reset();
+      authError.style.display = "none";
 
-        // Создаем текущего пользователя и добавляем lastLogin
-        currentUser = { ...registeredUser, lastLogin: new Date() };
-
-        console.log("Текущий пользователь:", currentUser);
-        alert(`Привет, ${currentUser.firstName}! Вы успешно вошли. Время последнего входа: ${currentUser.lastLogin}`);
+      currentUser = { ...registeredUser, lastLogin: new Date() };
+      alert(`Привет, ${currentUser.firstName}!`);
     } else {
-        authError.textContent = "Неверный логин или пароль";
-        authError.style.display = "block";
+      authError.textContent = "Неверный логин или пароль";
+      authError.style.display = "block";
     }
-});
+  });
