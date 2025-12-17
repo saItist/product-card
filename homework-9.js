@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const values = registerForm.getValues();
 
-      if (values.password !== values['password-repeat']) {
+      if (values.password !== values.passwordRepeat) {
         errorMessage.textContent = "Пароли не совпадают!";
         errorMessage.style.display = "block";
         return;
@@ -101,8 +101,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       if (
-        values['auth-login'] === registeredUser.login &&
-        values['auth-password'] === registeredUser.password
+        values.login === registeredUser.login &&
+        values.password === registeredUser.password
       ) {
         authModal.close();
         authForm.reset();

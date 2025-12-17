@@ -2,6 +2,7 @@ export class Modal {
   constructor(modalId) {
     this.modal = document.getElementById(modalId);
     this.closeButton = this.modal.querySelector('.close-modal');
+    this.overlay = this.modal.querySelector('.overlay');
 
     this.initCloseListeners();
   }
@@ -18,13 +19,18 @@ export class Modal {
     return this.modal.classList.contains('modal-showed');
   }
 
-  // IV. Подписка на кнопку закрытия
+  // Подписка на закрытие
   initCloseListeners() {
     if (this.closeButton) {
       this.closeButton.addEventListener('click', () => {
         this.close();
       });
     }
+
+    if (this.overlay) {
+      this.overlay.addEventListener('click', () => {
+        this.close();
+      });
+    }
   }
 }
-console.log('Modal class loaded');
