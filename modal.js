@@ -9,10 +9,12 @@ export class Modal {
 
   open() {
     this.modal.classList.add('modal-showed');
+    this.overlay.classList.add('overlay-showed');
   }
 
   close() {
     this.modal.classList.remove('modal-showed');
+    this.overlay.classList.remove('overlay-showed');
   }
 
   isOpen() {

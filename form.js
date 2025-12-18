@@ -8,14 +8,7 @@ export class Form {
   }
 
   getValues() {
-    const formData = new FormData(this.form);
-    const values = {};
-
-    for (const [name, value] of formData.entries()) {
-      values[name] = value.trim();
-    }
-
-    return values;
+    return Object.fromEntries(new FormData(this.form));
   }
 
   isValid() {
