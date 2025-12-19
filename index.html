@@ -14,32 +14,32 @@
     <form id="register-form" novalidate>
         <label>
             Имя:
-            <input type="text" id="first-name" placeholder="Введите имя..." required>
+            <input type="text" id="first-name" name="firstName" placeholder="Введите имя..." required>
         </label>
 
         <label>
             Фамилия:
-            <input type="text" id="last-name" placeholder="Введите фамилию..." required>
+            <input type="text" id="last-name" name="lastName" placeholder="Введите фамилию..." required>
         </label>
 
         <label>
             Дата рождения:
-            <input type="date" id="birth-date" required>
+            <input type="date" id="birth-date" name="birthDate"required>
         </label>
 
         <label>
             Логин:
-            <input type="text" id="login" placeholder="Придумайте логин..." required>
+            <input type="text" id="login" name="login" required>
         </label>
 
         <label>
             Пароль:
-            <input type="password" id="password" placeholder="Введите пароль..." required>
+            <input type="password" id="password" name="password" placeholder="Введите пароль..." required>
         </label>
 
         <label>
             Повторите пароль:
-            <input type="password" id="password-repeat" placeholder="Повторите пароль..." required>
+            <input type="password" id="password-repeat" name="passwordRepeat" placeholder="Повторите пароль..." required>
         </label>
 
         <button type="submit">Зарегистрироваться</button>
@@ -107,20 +107,11 @@
 
     </footer>
     
-
-
-    <script src="homework-5.js"></script>
-    <script src="homework-6.js"></script>
-    <script src="homework-7.js" type="module"></script>
-    <script src="homework-8.js" type="module"></script>
-    <script src="homework-9.js" type="module"></script>
-
-
     <!-- Кнопка Аутентификация -->
 <button id="auth-button" class="auth-button">Аутентификация</button>
 
 <!-- Модальное окно -->
-<div class="modal">
+<div class="modal" id="modal">
     <div class="overlay"></div>
     <div class="modal-content">
         <button class="close-modal">&times;</button>
@@ -128,17 +119,17 @@
         <form id="auth-form">
             <label>
                 Логин:
-                <input type="text" id="auth-login" placeholder="Введите логин" required>
+                <input type="text" id="auth-login" name="login" placeholder="Введите логин" required>
             </label>
             <label>
                 Пароль:
-                <input type="password" id="auth-password" placeholder="Введите пароль" required>
+                <input type="password" id="auth-password" name="password" placeholder="Введите пароль" required>
             </label>
             <button type="submit">Войти</button>
             <p id="auth-error" style="color: red; display: none;"></p>
         </form>
     </div>
 </div>
-
+    <script type="module" src="./main.js"></script>
 </body>
 </html>

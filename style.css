@@ -421,7 +421,7 @@
 
 /* Показываем модалку */
 .modal.modal-showed {
-    display: flex;
+    display: block;
 }
 
 /* Затемнение фона */
@@ -433,6 +433,10 @@
     height: 100%;
     background-color: rgba(0,0,0,0.5);
     z-index: 1;
+    display: none;
+}
+.overlay.overlay-showed {
+    display: block;
 }
 
 /* Содержимое модалки */
