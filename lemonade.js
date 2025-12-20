@@ -1,7 +1,7 @@
 import { Drink } from './drink.js';
 
 export class Lemonade extends Drink {
-  constructor(size, price) {
-    super('Лимонад', size, price, 10);
+  constructor(name, size, price) {
+    super(name, size, price, 10);
   }
 }
