@@ -8,10 +8,10 @@ export class Coffee extends Drink {
   }
 
   getInfo() {
-    return (
-      super.getInfo() +
+    const extraInfo =
       `Зёрна: ${this.beansType}\n` +
-      `Молоко: ${this.milkType}`
-    );
+      `Молоко: ${this.milkType}`;
+
+    return super.getInfo() + extraInfo;
   }
 }

@@ -14,13 +14,15 @@ export class Drink {
 
   // Получить информацию о напитке
   getInfo() {
-    return (
-    `Напиток: ${this.name}\n` +
-    `Размер: ${this.size}\n` +
-    `Цена: ${this.price} ₽\n` +
-    `Температура: ${this.#temperature}°C`
-  );
-}
+    const info =
+      `Напиток: ${this.name}\n` +
+      `Размер: ${this.size}\n` +
+      `Цена: ${this.price} ₽\n` +
+      `Температура: ${this.#temperature}°C`;
+
+    return info;
+
+  }
 
   // Получить температуру напитка
   getTemperature() {

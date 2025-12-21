@@ -6,10 +6,10 @@ export class Tea extends Drink {
     this.teaType = teaType;
   }
 
-  getInfo() {
-    return (
-      super.getInfo() +
-      `Тип чая: ${this.teaType}`
-    );
+getInfo() {
+  const extraInfo = `Тип чая: ${this.teaType}`;
+
+  return super.getInfo() + extraInfo;
+
   }
 }
