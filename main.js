@@ -13,4 +13,21 @@ const products = productCards.map(product => {
   return new SingleProduct(product);
 });
 
-console.log(products);
+import { Cafe } from './cafe.js';
+import { Coffee } from './coffee.js';
+import { Tea } from './tea.js';
+import { Lemonade } from './lemonade.js';
+
+
+const cafe = new Cafe('Black Bean', 'Москва, Арбат 12');
+
+console.log(cafe.getInfo());
+const lemonade = new Lemonade('Большой', 150, 'Клубника');
+const coffee = new Coffee('Большой', 250, 'Арабика', 'Овсяное');
+const tea = new Tea('Средний', 180, 'Зелёный');
+
+cafe.orderDrink(coffee);
+console.log('----------------');
+cafe.orderDrink(tea);
+console.log('----------------');
+cafe.orderDrink(lemonade);

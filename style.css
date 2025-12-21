@@ -421,7 +421,7 @@
 
 /* Показываем модалку */
 .modal.modal-showed {
-    display: block;
+    display: flex;
 }
 
 /* Затемнение фона */
