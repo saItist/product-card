@@ -24,12 +24,12 @@
 
         <label>
             Дата рождения:
-            <input type="date" id="birth-date" name="birthDate"required>
+            <input type="date" id="birth-date" name="birthDate" required>
         </label>
 
         <label>
             Логин:
-            <input type="text" id="login" name="login" required>
+            <input type="text" id="login" name="login" placeholder="Введите логин..." required>
         </label>
 
         <label>
@@ -111,8 +111,8 @@
 <button id="auth-button" class="auth-button">Аутентификация</button>
 
 <!-- Модальное окно -->
+<div class="overlay"></div>
 <div class="modal" id="modal">
-    <div class="overlay"></div>
     <div class="modal-content">
         <button class="close-modal">&times;</button>
         <h2 class="modal-title">Вход в аккаунт</h2>
@@ -130,6 +130,6 @@
         </form>
     </div>
 </div>
-    <script type="module" src="./main.js"></script>
+<script type="module" src="./main.js"></script>
 </body>
 </html>

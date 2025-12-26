@@ -1,4 +1,4 @@
-import { Modal } from './modal.js';
+import { Modal } from './homework-12/modal.js';
 import { Form } from './form.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------- РЕГИСТРАЦИЯ ---------- */
 
-  const errorMessage = document.getElementById("error-message");
+  const errorMessage = document.getElementById('error-message');
   let registeredUser = null;
 
   document
@@ -62,8 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
   /* ---------- МОДАЛКА ---------- */
-
-  const authModal = new Modal('modal');
+  const authModal = new Modal("#modal");
   const authButton = document.getElementById("auth-button");
 
   authButton.addEventListener("click", () => {
@@ -118,8 +117,4 @@ document.addEventListener('DOMContentLoaded', () => {
         authError.style.display = "block";
       }
     });
-
-  
-
-  
 });
