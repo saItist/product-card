@@ -10,9 +10,6 @@ export class Modal {
     }
 
     this.closeButton = this.modal.querySelector('.close-modal');
-
-    // единый обработчик закрытия
-    this.handleClose = this.handleClose.bind(this);
   }
 
   open() {
@@ -21,7 +18,7 @@ export class Modal {
     this.modal.classList.add('modal-showed');
     Modal.overlay.classList.add('overlay-showed');
 
-    this.initCloseHandlers();
+    this.#initCloseHandlers();
   }
 
   close() {
@@ -30,26 +27,28 @@ export class Modal {
     this.modal.classList.remove('modal-showed');
     Modal.overlay.classList.remove('overlay-showed');
 
-    this.removeCloseHandlers();
+    this.#removeCloseHandlers();
   }
 
-  handleClose() {
+  // 🔒 приватный обработчик
+  #handleClose() {
     this.close();
   }
 
-  initCloseHandlers() {
-    Modal.overlay.addEventListener('click', this.handleClose);
+  // 🔒 приватные методы
+  #initCloseHandlers() {
+    Modal.overlay.addEventListener('click', this.#handleClose);
 
     if (this.closeButton) {
-      this.closeButton.addEventListener('click', this.handleClose);
+      this.closeButton.addEventListener('click', this.#handleClose);
     }
   }
 
-  removeCloseHandlers() {
-    Modal.overlay.removeEventListener('click', this.handleClose);
+  #removeCloseHandlers() {
+    Modal.overlay.removeEventListener('click', this.#handleClose);
 
     if (this.closeButton) {
-      this.closeButton.removeEventListener('click', this.handleClose);
+      this.closeButton.removeEventListener('click', this.#handleClose);
     }
   }
 }
