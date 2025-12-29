@@ -1,11 +1,11 @@
 export class Modal {
   static overlay = document.querySelector('.overlay');
 
-  constructor(modalSelector) {
-    this.modal = document.querySelector(modalSelector);
+  constructor(selector) {
+    this.modal = document.querySelector(selector);
 
     if (!this.modal) {
-      console.warn(`Modal: элемент "${modalSelector}" не найден`);
+      console.warn(`Modal "${selector}" not found`);
       return;
     }
 
@@ -13,42 +13,40 @@ export class Modal {
   }
 
   open() {
-    if (!this.modal || !Modal.overlay) return;
+    if (!Modal.overlay) return;
 
     this.modal.classList.add('modal-showed');
     Modal.overlay.classList.add('overlay-showed');
 
-    this.#initCloseHandlers();
+    this.#addCloseListeners();
   }
 
   close() {
-    if (!this.modal || !Modal.overlay) return;
+    if (!Modal.overlay) return;
 
     this.modal.classList.remove('modal-showed');
     Modal.overlay.classList.remove('overlay-showed');
 
-    this.#removeCloseHandlers();
+    this.#removeCloseListeners();
   }
 
-  // 🔒 приватный обработчик
-  #handleClose() {
+  #closeHandler = () => {
     this.close();
-  }
+  };
 
-  // 🔒 приватные методы
-  #initCloseHandlers() {
-    Modal.overlay.addEventListener('click', this.#handleClose);
+  #addCloseListeners() {
+    Modal.overlay.addEventListener('click', this.#closeHandler);
 
     if (this.closeButton) {
-      this.closeButton.addEventListener('click', this.#handleClose);
+      this.closeButton.addEventListener('click', this.#closeHandler);
     }
   }
 
-  #removeCloseHandlers() {
-    Modal.overlay.removeEventListener('click', this.#handleClose);
+  #removeCloseListeners() {
+    Modal.overlay.removeEventListener('click', this.#closeHandler);
 
     if (this.closeButton) {
-      this.closeButton.removeEventListener('click', this.#handleClose);
+      this.closeButton.removeEventListener('click', this.#closeHandler);
     }
   }
 }
