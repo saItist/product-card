@@ -30,23 +30,23 @@ export class Modal {
     this.#removeCloseListeners();
   }
 
-  #closeHandler = () => {
+  #handleClose = () => {
     this.close();
   };
 
   #addCloseListeners() {
-    Modal.overlay.addEventListener('click', this.#closeHandler);
+    Modal.overlay.addEventListener('click', this.#handleClose);
 
     if (this.closeButton) {
-      this.closeButton.addEventListener('click', this.#closeHandler);
+      this.closeButton.addEventListener('click', this.#handleClose);
     }
   }
 
   #removeCloseListeners() {
-    Modal.overlay.removeEventListener('click', this.#closeHandler);
+    Modal.overlay.removeEventListener('click', this.#handleClose);
 
     if (this.closeButton) {
-      this.closeButton.removeEventListener('click', this.#closeHandler);
+      this.closeButton.removeEventListener('click', this.#handleClose);
     }
   }
 }
