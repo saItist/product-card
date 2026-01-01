@@ -5,6 +5,15 @@ import './homework-8.js';
 import './homework-9.js';
 import { productCards } from './products.js';
 import { SingleProduct, GiftSet } from './homework-10.js';
+import { Modal } from './homework-12/modal.js';
+
+const authModal = new Modal('#modal');
+
+const authButton = document.getElementById('auth-button');
+authButton.addEventListener('click', () => {
+  authModal.open();
+});
+
 
 const products = productCards.map(product => {
   if (product.name.includes("набор")) {

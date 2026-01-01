@@ -119,12 +119,6 @@
     line-height: 24px;
 }
 
-.cards-list-container {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
 .product-compound {
     list-style: none;
     padding: 0;
@@ -384,7 +378,6 @@
     font-size: 14px;
     font-weight: 500;
 }
-
 /* Кнопка Аутентификация */
 .auth-button {
     position: fixed;
@@ -405,7 +398,6 @@
 .auth-button:hover {
     background-color: #000;
 }
-
 /* Модальное окно */
 .modal {
     display: none;
@@ -418,12 +410,10 @@
     align-items: center;
     z-index: 1500;
 }
-
 /* Показываем модалку */
 .modal.modal-showed {
     display: flex;
 }
-
 /* Затемнение фона */
 .overlay {
     position: absolute;
@@ -438,7 +428,6 @@
 .overlay.overlay-showed {
     display: block;
 }
-
 /* Содержимое модалки */
 .modal-content {
     position: relative;
@@ -451,7 +440,6 @@
     box-shadow: 0 5px 25px rgba(0,0,0,0.2);
     font-family: 'Montserrat', sans-serif;
 }
-
 /* Крестик */
 .close-modal {
     position: absolute;
@@ -462,7 +450,6 @@
     font-size: 24px;
     cursor: pointer;
 }
-
 /* Стили формы модалки */
 #auth-form {
     display: flex;
