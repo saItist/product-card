@@ -1,0 +1,51 @@
+body {
+  font-family: Montserrat, sans-serif;
+  background: #f7f7fa;
+}
+
+.container {
+  max-width: 900px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.status {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.controls {
+  margin-bottom: 30px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background: #3a3a3a;
+  color: white;
+  cursor: pointer;
+}
+
+.users {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.user-card {
+  width: 240px;
+  padding: 15px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.user-card button {
+  margin-top: 10px;
+  background: #c0392b;
+}
