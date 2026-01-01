@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Async users</title>
+  <link rel="stylesheet" href="./async.css">
+</head>
+<body>
+
+  <div class="container">
+    <p id="status" class="status">Данные загружаются…</p>
+
+    <div class="controls">
+      <button id="load-users">Получить всех</button>
+      <button id="remove-all">Удалить всех</button>
+    </div>
+
+    <div id="users" class="users"></div>
+  </div>
+
+  <script type="module" src="./async.js"></script>
+</body>
+</html>
